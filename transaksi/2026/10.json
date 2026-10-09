@@ -1,0 +1,13 @@
+{
+  "transaksi": [],
+  "belanja": [
+    {
+      "id_beli": "BL1791568848946",
+      "tanggal": "2026-10-09",
+      "nama_bahan": "",
+      "qty": 234,
+      "satuan": "gram",
+      "total_biaya": 12345
+    }
+  ]
+}
