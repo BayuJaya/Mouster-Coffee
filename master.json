@@ -8,6 +8,21 @@
       "Harga_Per_Satuan": 81
     }
   ],
-  "menu": [],
-  "resep": []
+  "menu": [
+    {
+      "ID_Menu": "MN1791572600432",
+      "Nama_Menu": "23er",
+      "Link_Foto": "https://raw.githubusercontent.com/BayuJaya/Gambar/main/Mouster_Coffee/1791572598039_1_(2).png",
+      "Kategori": "Coffee",
+      "Harga_Jual": 23456,
+      "Status": "Active"
+    }
+  ],
+  "resep": [
+    {
+      "ID_Menu": "MN1791572600432",
+      "Nama_Bahan": "gula sirup",
+      "Qty": 2345
+    }
+  ]
 }
