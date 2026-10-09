@@ -1,0 +1,13 @@
+{
+  "transaksi": [],
+  "belanja": [
+    {
+      "id_beli": "BL1791571444137",
+      "tanggal": "2026-10-09",
+      "nama_bahan": "gula sirup",
+      "qty": 0,
+      "satuan": "ml",
+      "total_biaya": 0
+    }
+  ]
+}
