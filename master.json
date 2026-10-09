@@ -1,0 +1,13 @@
+{
+  "bahan": [
+    {
+      "ID_Bahan": "BH1791571442903",
+      "Nama_Bahan": "gula sirup",
+      "Satuan": "ml",
+      "Stok": 0,
+      "Harga_Per_Satuan": 0
+    }
+  ],
+  "menu": [],
+  "resep": []
+}
