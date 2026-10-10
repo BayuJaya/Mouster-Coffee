@@ -128,6 +128,14 @@
       "qty": 0,
       "satuan": "gram",
       "total_biaya": 0
+    },
+    {
+      "id_beli": "BL1791613518919",
+      "tanggal": "2026-10-10",
+      "nama_bahan": "",
+      "qty": 0,
+      "satuan": "gram",
+      "total_biaya": 0
     }
   ]
 }
