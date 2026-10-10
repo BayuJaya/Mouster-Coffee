@@ -1,1 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouster Coffee - Owner Portal</title>
+  <!-- Google Fonts & Lucide Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<!-- LAYAR LOGIN -->
+<!-- LAYAR LOGIN -->
+  <div id="login-screen" class="login-wrapper">
+    <div class="login-box glass-card" style="text-align: center;">
+      <img src="https://raw.githubusercontent.com/BayuJaya/Gambar/main/icon%20mouster%20coffe.png" alt="Mouster Coffee" style="max-height: 100px; object-fit: contain;  display: block;">
+      <h2 class="text-xl font-bold text-white text-center mb-1">Owner Portal</h2>
+      <p class="text-xs text-gray-400 text-center mb-6">Silakan login untuk melanjutkan</p>
+      
+      <form id="login-form" style="text-align: left; margin-top: 20px;">
+        <div class="form-group mb-3">
+          <label>Username</label>
+          <input type="text" id="username" class="form-input" required placeholder="Masukkan username">
+        </div>
+        <div class="form-group mb-5"style="text-align: left; margin-top: 10px;">
+          <label>Password</label>
+          <input type="password" id="password" class="form-input" required placeholder="Masukkan password">
+        </div>
+        <button type="submit" id="btn-login" class="btn-primary w-full flex justify-center gap-2">
+          <span>Login Dashboard</span>
+        </button>
+      </form>
+      <p id="login-error" class="text-red-500 text-xs text-center mt-3 hidden"></p>
+    </div>
+  </div>
+
+
+  <!-- UBAH APP CONTAINER JADI HIDDEN DEFAULTNYA -->
+  <div class="app-container hidden" id="main-app"> 
+    <!-- Header -->
+<!-- Header -->
+    <header class="main-header">
+      <div class="brand">
+        <img src="https://raw.githubusercontent.com/BayuJaya/Gambar/main/icon%20mouster%20coffe.png" alt="Mouster Coffee Logo" style="height: 50px; object-fit: contain;">
+      </div>
+      <button class="icon-btn" id="btn-refresh">
+        <i data-lucide="refresh-cw"></i>
+      </button>
+    </header>
+
+    <!-- Filter Periode (Khusus Tab Laporan) -->
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-btn active">Hari Ini</button>
+      <button class="filter-btn">Minggu Ini</button>
+      <button class="filter-btn">Bulan Ini</button>
+    </div>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="content-area">
+
+      <!-- TAB 1: LAPORAN -->
+      <section id="tab-laporan" class="tab-content active">
+        <div class="card card-accent">
+          <div class="card-header">
+            <span>TOTAL OMSET (REVENUE)</span>
+            <i data-lucide="trending-up" class="icon-red"></i>
+          </div>
+          <div class="stat-value">Rp ...</div>
+          <p class="stat-desc text-green">... Cups Terjual</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <span class="card-title">TOTAL HPP</span>
+            <div class="stat-value-sm text-red">Rp ...</div>
+            <span class="subtext">Modal Bahan</span>
+          </div>
+          <div class="card">
+            <span class="card-title">PROFIT KOTOR</span>
+            <div class="stat-value-sm text-green">Rp ...</div>
+            <span class="subtext">Margin ~66%</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="section-title"><i data-lucide="flame" class="icon-red"></i> Menu Terlaris</h3>
+          <div class="list-container">
+            <div class="list-item">
+              <div>
+                <p class="item-name">Es Kopi Mouster</p>
+                <p class="item-sub">45 Cups</p>
+              </div>
+              <span class="item-price">Rp 810.000</span>
+            </div>
+            <div class="list-item">
+              <div>
+                <p class="item-name">Red Velvet Latte</p>
+                <p class="item-sub">22 Cups</p>
+              </div>
+              <span class="item-price">Rp 440.000</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: STOK BAHAN BAKU -->
+      <section id="tab-stok" class="tab-content">
+        <div class="section-header">
+          <h3>Stok Bahan Baku</h3>
+          <button id="btn-open-modal-stok" class="btn-primary-sm">+ Tambah Bahan</button>
+        </div>
+        <div class="list-container">
+
+        </div>
+      </section>
+
+      <!-- TAB 3: MENU & RESEP -->
+      <section id="tab-resep" class="tab-content">
+        <div class="section-header">
+          <h3>Daftar Menu & HPP</h3>
+          <button id="btn-open-modal-resep" class="btn-primary-sm">+ Menu Baru</button>
+        </div>
+        <div class="list-container"></div>
+      </section>
+
+      <!-- TAB 4: BELI BAHAN -->
+      <section id="tab-belanja" class="tab-content">
+        <div class="card">
+          <h3 class="section-title">Catat Pembelian Bahan</h3>
+          <form id="form-belanja" class="form-container">
+            <div class="form-group">
+              <label>Pilih Bahan Baku</label>
+              <select class="form-input">
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Jumlah Beli (Qty)</label>
+              <input type="number" class="form-input" placeholder="Misal: 1000">
+            </div>
+            <div class="form-group">
+              <label>Total Biaya (Rp)</label>
+              <input type="number" class="form-input" placeholder="Misal: 180000">
+            </div>
+            <button type="submit" class="btn-primary">Simpan Pembelian</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- BOTTOM NAVIGATION BAR -->
+    <nav class="bottom-nav">
+      <button class="nav-btn active" data-tab="tab-laporan">
+        <i data-lucide="layout-dashboard"></i>
+        <span>Laporan</span>
+      </button>
+      <button class="nav-btn" data-tab="tab-stok">
+        <i data-lucide="boxes"></i>
+        <span>Stok</span>
+      </button>
+      <button class="nav-btn" data-tab="tab-resep">
+        <i data-lucide="utensils-crossed"></i>
+        <span>Menu</span>
+      </button>
+      <button class="nav-btn" data-tab="tab-belanja">
+        <i data-lucide="shopping-bag"></i>
+        <span>Belanja</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- MODAL TAMBAH MENU & RESEP -->
+  <div id="modal-resep" class="modal-overlay hidden">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Tambah Menu & Resep Baru</h3>
+        <button id="btn-close-modal" class="close-btn"><i data-lucide="x"></i></button>
+      </div>
+      
+      <form id="form-tambah-resep" class="form-container">
+        <!-- Info Menu -->
+        <div class="form-group">
+          <label>Nama Menu Baru</label>
+          <input type="text" id="input-nama-menu" class="form-input" placeholder="Misal: Matcha Latte" required>
+        </div>
+        <div class="form-group">
+          <label>Foto Menu (Opsional)</label>
+          <input type="file" id="input-foto-menu" class="form-input" accept="image/*">
+        </div>
+        <div class="grid-2">
+          <div class="form-group">
+            <label>Kategori</label>
+            <select id="input-kategori" class="form-input">
+              <option value="Coffee">Ice Coffee</option>
+              <option value="Non-Coffee">Hot Coffee</option>
+              <option value="Snack">Snack</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Harga Jual (Rp)</label>
+            <input type="number" id="input-harga" class="form-input" placeholder="25000" required>
+          </div>
+        </div>
+
+        <hr class="divider">
+        
+        <!-- Area Resep (Dinamis) -->
+        <div class="section-title" style="justify-content: space-between;">
+          <span>Komposisi Bahan Baku</span>
+          <button type="button" id="btn-tambah-bahan" class="btn-outline-sm">+ Tambah Bahan</button>
+        </div>
+        
+        <div id="area-bahan-baku">
+          <!-- Baris bahan baku pertama (Default) -->
+          <div class="bahan-row">
+            <select class="form-input input-bahan" required>
+              <option value="">-- Pilih Bahan --</option>
+            </select>
+            <input type="number" class="form-input input-qty" placeholder="Qty" required>
+            <span class="unit-text">gr/ml</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary mt-3">Simpan Menu & Resep</button>
+      </form>
+    </div>
+  </div>
+
+<!-- MODAL TAMBAH BAHAN BAKU (MASTER SAJA) -->
+  <div id="modal-stok" class="modal-overlay hidden">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Daftarkan Bahan Baru</h3>
+        <button id="btn-close-modal-stok" class="close-btn"><i data-lucide="x"></i></button>
+      </div>
+      
+      <form id="form-tambah-stok" class="form-container">
+        <div class="form-group">
+          <label>Nama Bahan Baku</label>
+          <input type="text" id="input-nama-stok" class="form-input" placeholder="Misal: Gula Sirup" required>
+        </div>
+        <div class="form-group">
+          <label>Satuan Ukur</label>
+          <input type="text" id="input-satuan-stok" class="form-input" list="list-satuan" placeholder="gram / ml / pcs" required>
+        </div>
+        <button type="submit" class="btn-primary mt-3">Simpan Master Bahan</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Datalist Pilihan Satuan -->
+  <datalist id="list-satuan">
+    <option value="gram">
+    <option value="ml">
+    <option value="pcs">
+  </datalist>
+
+  <!-- GLOBAL LOADING OVERLAY (Mencegah klik ganda saat proses berjalan) -->
+  <div id="global-loading-overlay" class="modal-overlay hidden" style="background: rgba(0,0,0,0.6); z-index: 9999; display: none;">
+    <div style="text-align: center; color: white;">
+      <div class="spinner-sm" style="width: 40px; height: 40px; margin: 0 auto 12px auto; border-width: 4px;"></div>
+      <p id="global-loading-text" style="font-size: 14px; font-weight: 600;">Sedang mengupload data ke server...</p>
+    </div>
+  </div>
+
+  <!-- CONTAINER TOAST NOTIFICATION (Di kanan bawah) -->
+  <div id="toast-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 10000; display: flex; flex-direction: column; gap: 10px; max-width: 320px;"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
