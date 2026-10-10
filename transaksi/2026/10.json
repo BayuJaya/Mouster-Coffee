@@ -8,6 +8,14 @@
       "qty": 0,
       "satuan": "ml",
       "total_biaya": 0
+    },
+    {
+      "id_beli": "BL1791607709026",
+      "tanggal": "2026-10-10",
+      "nama_bahan": "ice",
+      "qty": 0,
+      "satuan": "ml",
+      "total_biaya": 0
     }
   ]
 }
