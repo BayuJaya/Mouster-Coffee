@@ -308,17 +308,6 @@ body {
   color: var(--mouster-red-hover);
 }
 
-/* Styling Khusus Login */
-.login-wrapper {
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100vh;
-  background-color: var(--bg-main);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  padding: 20px;
-}
 
 .login-box {
   width: 100%;
@@ -352,17 +341,32 @@ body {
   margin: 0 auto 16px auto;
 }
 
-/* Modal Overlay & Box */
+/* Untuk Modal Pop-up (Tambah Menu & Stok) */
 .modal-overlay {
   position: fixed;
-  top: 0; left: 0; width: 100%; height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 10000;
-  padding: 16px;
+  align-items: center; /* Kunci agar selalu di tengah vertikal */
+  padding: 15px;
+  box-sizing: border-box;
+  z-index: 9999;
+  overflow-y: auto; /* Bisa di-scroll jika layar HP terlalu pendek */
+}
+
+/* Untuk Kotak Login */
+.login-wrapper {
+  min-height: 100vh;
+  min-height: 100dvh; /* Mengatasi tinggi layar dinamis di HP modern */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Kunci agar pas di tengah secara vertikal */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .modal-box {
