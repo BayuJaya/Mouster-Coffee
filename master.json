@@ -6,6 +6,13 @@
       "Satuan": "ml",
       "Stok": 0,
       "Harga_Per_Satuan": 0
+    },
+    {
+      "ID_Bahan": "BH1791607707838",
+      "Nama_Bahan": "ice",
+      "Satuan": "ml",
+      "Stok": 0,
+      "Harga_Per_Satuan": 0
     }
   ],
   "menu": [],
