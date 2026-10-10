@@ -64,6 +64,14 @@
       "qty": 0,
       "satuan": "122",
       "total_biaya": 0
+    },
+    {
+      "id_beli": "BL1791608919051",
+      "tanggal": "2026-10-10",
+      "nama_bahan": "gula sirup",
+      "qty": 0,
+      "satuan": "gram",
+      "total_biaya": 0
     }
   ]
 }
