@@ -13,6 +13,13 @@
       "Satuan": "ml",
       "Stok": 0,
       "Harga_Per_Satuan": 0
+    },
+    {
+      "ID_Bahan": "BH1791607787309",
+      "Nama_Bahan": "gula cair",
+      "Satuan": "ml",
+      "Stok": 0,
+      "Harga_Per_Satuan": 0
     }
   ],
   "menu": [],
