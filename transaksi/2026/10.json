@@ -16,6 +16,14 @@
       "qty": 0,
       "satuan": "ml",
       "total_biaya": 0
+    },
+    {
+      "id_beli": "BL1791607788497",
+      "tanggal": "2026-10-10",
+      "nama_bahan": "gula cair",
+      "qty": 0,
+      "satuan": "ml",
+      "total_biaya": 0
     }
   ]
 }
