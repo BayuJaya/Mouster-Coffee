@@ -44,6 +44,14 @@
       "Kategori": "Snack",
       "Harga_Jual": 23456,
       "Status": "Active"
+    },
+    {
+      "ID_Menu": "MN1791609148342",
+      "Nama_Menu": "12",
+      "Link_Foto": "https://raw.githubusercontent.com/BayuJaya/Gambar/main/Mouster_Coffee/1791609147319_icon.jpg",
+      "Kategori": "Coffee",
+      "Harga_Jual": 12,
+      "Status": "Active"
     }
   ],
   "resep": [
@@ -51,6 +59,11 @@
       "ID_Menu": "MN1791608933312",
       "Nama_Bahan": "Air biasa",
       "Qty": 2345
+    },
+    {
+      "ID_Menu": "MN1791609148342",
+      "Nama_Bahan": "Air biasa",
+      "Qty": 12
     }
   ]
 }
