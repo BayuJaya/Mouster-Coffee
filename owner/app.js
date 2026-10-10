@@ -615,6 +615,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     container.appendChild(toast);
     lucide.createIcons();
+
+    // === TAMBAHKAN KODE INI AGAR TOAST ERROR/WARNING OTOMATIS HILANG ===
+    if (type !== "loading") {
+      setTimeout(() => {
+        toast.style.animation = "fadeOutRight 0.3s ease forwards";
+        setTimeout(() => toast.remove(), 300);
+      }, 2500); // Hilang otomatis setelah 4 detik
+    }
+    // =================================================================
+
     return toast;
   }
 
