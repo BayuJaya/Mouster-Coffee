@@ -87,6 +87,14 @@
       "Kategori": "Coffee",
       "Harga_Jual": 12,
       "Status": "Active"
+    },
+    {
+      "ID_Menu": "MN1791614241115",
+      "Nama_Menu": "Hshsbd",
+      "Link_Foto": "",
+      "Kategori": "Coffee",
+      "Harga_Jual": 500,
+      "Status": "Active"
     }
   ],
   "resep": [
@@ -99,6 +107,11 @@
       "ID_Menu": "MN1791609148342",
       "Nama_Bahan": "Air biasa",
       "Qty": 12
+    },
+    {
+      "ID_Menu": "MN1791614241115",
+      "Nama_Bahan": "gula sirup",
+      "Qty": 28
     }
   ]
 }
