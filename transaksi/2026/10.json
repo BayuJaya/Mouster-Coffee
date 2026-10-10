@@ -1,0 +1,13 @@
+{
+  "transaksi": [],
+  "belanja": [
+    {
+      "id_beli": "BL1791607692658",
+      "tanggal": "2026-10-10",
+      "nama_bahan": "Air biasa",
+      "qty": 0,
+      "satuan": "ml",
+      "total_biaya": 0
+    }
+  ]
+}
