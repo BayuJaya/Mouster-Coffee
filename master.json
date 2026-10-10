@@ -20,6 +20,13 @@
       "Satuan": "ml",
       "Stok": 0,
       "Harga_Per_Satuan": 0
+    },
+    {
+      "ID_Bahan": "BH1791608300920",
+      "Nama_Bahan": "qwe",
+      "Satuan": "122",
+      "Stok": 0,
+      "Harga_Per_Satuan": 0
     }
   ],
   "menu": [],
