@@ -27,6 +27,13 @@
       "Satuan": "122",
       "Stok": 0,
       "Harga_Per_Satuan": 0
+    },
+    {
+      "ID_Bahan": "BH1791608918113",
+      "Nama_Bahan": "gula sirup",
+      "Satuan": "gram",
+      "Stok": 0,
+      "Harga_Per_Satuan": 0
     }
   ],
   "menu": [],
