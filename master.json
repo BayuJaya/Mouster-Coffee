@@ -36,6 +36,21 @@
       "Harga_Per_Satuan": 0
     }
   ],
-  "menu": [],
-  "resep": []
+  "menu": [
+    {
+      "ID_Menu": "MN1791608933312",
+      "Nama_Menu": "23er",
+      "Link_Foto": "",
+      "Kategori": "Snack",
+      "Harga_Jual": 23456,
+      "Status": "Active"
+    }
+  ],
+  "resep": [
+    {
+      "ID_Menu": "MN1791608933312",
+      "Nama_Bahan": "Air biasa",
+      "Qty": 2345
+    }
+  ]
 }
