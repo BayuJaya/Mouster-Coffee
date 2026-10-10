@@ -1,0 +1,529 @@
+:root {
+  --bg-main: #121212;
+  --card-bg: #1e1e1e;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --mouster-red: #d90429;
+  --mouster-red-hover: #ef233c;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --green: #10b981;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 480px; /* Dioptimalkan untuk layar HP */
+  min-height: 100vh;
+  padding: 16px 16px 90px 16px;
+  position: relative;
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background-color: var(--mouster-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 20px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(217, 4, 41, 0.4);
+}
+
+.subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.icon-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 8px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  overflow-x: auto;
+}
+
+.filter-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: var(--mouster-red);
+  color: white;
+  border-color: var(--mouster-red);
+}
+
+/* Cards Layout */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.card-accent {
+  border-left: 4px solid var(--mouster-red);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.stat-value {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 8px 0 4px 0;
+}
+
+.stat-value-sm {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.text-red { color: var(--mouster-red-hover); }
+.text-green { color: var(--green); }
+.icon-red { color: var(--mouster-red-hover); width: 18px; height: 18px; }
+
+/* Lists */
+.section-title {
+  font-size: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.item-name { font-weight: 600; font-size: 14px; }
+.item-sub { font-size: 12px; color: var(--text-muted); }
+.item-price { font-weight: 700; font-size: 14px; }
+
+/* Tabs Logic */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Stok & Menu Elements */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.btn-primary-sm {
+  background: var(--mouster-red);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 700;
+}
+.badge-success { background: rgba(16, 185, 129, 0.2); color: var(--green); }
+.badge-warning { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+
+.stok-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.hpp-box {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 8px 0;
+  font-size: 12px;
+}
+
+.resep-detail {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.resep-detail ul {
+  padding-left: 18px;
+  margin-top: 6px;
+}
+
+/* Form Styles */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.form-input {
+  background: #121212;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: var(--mouster-red);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  background: rgba(18, 18, 18, 0.95);
+  border-top: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-btn.active {
+  color: var(--mouster-red-hover);
+}
+
+/* Styling Khusus Login */
+.login-wrapper {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100vh;
+  background-color: var(--bg-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 360px;
+  padding: 30px 20px;
+  border-radius: 20px;
+}
+
+/* Helper Class */
+.hidden { display: none !important; }
+.w-full { width: 100%; }
+.text-center { text-align: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mb-4 { margin-bottom: 16px; }
+.mt-3 { margin-top: 12px; }
+
+
+/* Perbaikan Logo Login */
+.login-logo {
+  width: 64px;
+  height: 64px;
+  background-color: var(--mouster-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 32px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(217, 4, 41, 0.5);
+  margin: 0 auto 16px auto;
+}
+
+/* Modal Overlay & Box */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 16px;
+}
+
+.modal-box {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 20px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal-header h3 { font-size: 16px; font-weight: 700; }
+.close-btn { background: none; border: none; color: var(--text-muted); cursor: pointer; }
+.divider { border: 0; border-top: 1px solid var(--border-color); margin: 16px 0; }
+
+/* Dynamic Input Bahan */
+.bahan-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr auto;
+  gap: 8px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.unit-text { font-size: 11px; color: var(--text-muted); width: 30px;}
+
+.btn-outline-sm {
+  background: transparent;
+  border: 1px solid var(--mouster-red);
+  color: var(--mouster-red-hover);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Pastikan modal tidak menabrak pinggiran dan tidak ada scroll horizontal */
+.modal-box {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 400px; /* Lebar maksimal */
+  border-radius: 20px;
+  padding: 20px;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden; /* Menghentikan scroll horizontal */
+  box-sizing: border-box;
+}
+
+/* Pastikan input tidak melebihi kolomnya */
+.form-input {
+  width: 100%;
+  min-width: 0;
+  background: #121212;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Penyesuaian grid agar ikon tong sampah sejajar dan pas */
+.bahan-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 30px; /* 30px khusus untuk tombol hapus */
+  gap: 8px;
+  margin-bottom: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+/* =========================================
+   ANIMASI LOADING (SPINNER & TITIK)
+========================================= */
+
+/* 1. Efek Lingkaran Muter (Spinner) */
+.spinner-sm {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 1s ease-in-out infinite;
+  vertical-align: middle;
+}
+
+/* Spinner warna hitam/merah untuk di luar tombol biru */
+.spinner-dark {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #d32f2f;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 2. Efek Titik-Titik Berjalan (Loading Dots) */
+.loading-dots::after {
+  content: '';
+  animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% { content: ''; }
+  40% { content: '.'; }
+  60% { content: '..'; }
+  80%, 100% { content: '...'; }
+}
+
+/* Animasi khusus untuk Icon Refresh di Header */
+.spin-icon {
+  animation: spin 1s linear infinite;
+}
+
+/* Custom Toast Notification Styling */
+.custom-toast {
+  background: #1e1e1e;
+  border-left: 4px solid var(--primary-color, #ff3b30);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  animation: slideInRight 0.3s ease forwards;
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.custom-toast.success {
+  border-left-color: #34c759;
+}
+
+.custom-toast.error {
+  border-left-color: #ff3b30;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutRight {
+  to {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
