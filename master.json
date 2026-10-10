@@ -62,6 +62,13 @@
       "Satuan": "gram",
       "Stok": 0,
       "Harga_Per_Satuan": 0
+    },
+    {
+      "ID_Bahan": "BH1791613559643",
+      "Nama_Bahan": "",
+      "Satuan": "gram",
+      "Stok": 0,
+      "Harga_Per_Satuan": 0
     }
   ],
   "menu": [
