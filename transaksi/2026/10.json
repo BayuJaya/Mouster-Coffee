@@ -48,6 +48,14 @@
       "qty": 0,
       "satuan": "122",
       "total_biaya": 0
+    },
+    {
+      "id_beli": "BL1791608311965",
+      "tanggal": "2026-10-10",
+      "nama_bahan": "qwe",
+      "qty": 0,
+      "satuan": "122",
+      "total_biaya": 0
     }
   ]
 }
