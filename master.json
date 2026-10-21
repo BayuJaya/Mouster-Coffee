@@ -1,0 +1,13 @@
+{
+  "bahan": [
+    {
+      "ID_Bahan": "BH1792552519601",
+      "Nama_Bahan": "Gula",
+      "Satuan": "Gram",
+      "Stok": 0,
+      "Harga_Per_Satuan": 0
+    }
+  ],
+  "menu": [],
+  "resep": []
+}
