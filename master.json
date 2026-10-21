@@ -8,6 +8,21 @@
       "Harga_Per_Satuan": 15
     }
   ],
-  "menu": [],
-  "resep": []
+  "menu": [
+    {
+      "ID_Menu": "MN1792552597026",
+      "Nama_Menu": "Gg",
+      "Link_Foto": "",
+      "Kategori": "Coffee",
+      "Harga_Jual": 55,
+      "Status": "Active"
+    }
+  ],
+  "resep": [
+    {
+      "ID_Menu": "MN1792552597026",
+      "Nama_Bahan": "Gula",
+      "Qty": 663
+    }
+  ]
 }
